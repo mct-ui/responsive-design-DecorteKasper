@@ -242,9 +242,9 @@ a:focus {
     flex-wrap: wrap;
 }
 
-    .o-layout__item {
-        flex-basis: 100%;
-    }
+.o-layout__item {
+    flex-basis: 100%;
+}
 
 /* gutter modifiers, these affect o-layout__item too */
 
@@ -344,9 +344,15 @@ a:focus {
     align-content: space-between;
 }
 
+.o-list {
+    list-style: none;
+    padding: 0;
+}
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+/* LOGO */
 .c-logo{
     height: 32px;
 }
@@ -356,6 +362,68 @@ a:focus {
 @media(min-width:768px){
     .c-logo{
         height: 40px;
+    }
+}
+
+/* NAV */
+.c-nav {
+    font-size: 18px;
+    line-height: 24px;
+}
+.c-nav__link {
+    text-decoration: none;
+    font-weight: 400;
+    padding: 8px 0;
+}
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+    color: var(--color-neutral-dark)
+}
+
+.c-nav__link:hover,
+.c-nav__link:focus,
+.is-selected .c-nav__link {
+    color: var(--color-primary)
+}
+
+@media (min-width: 768px) {
+    .c-nav__list {
+        display: flex;
+        gap: 16px;
+    }
+
+    .c-nav__link {}
+}
+
+.c-nav--meta {
+    font-size: 16px;
+}
+.c-nav__link--meta,
+.c-nav__link--meta:visited,
+.c-nav__link--meta:active{
+    color: #6C6C75;
+}
+.c-nav__link--meta:hover,
+.c-nav__link--meta:focus{
+    color: var(--color-primary);
+}
+
+/* HEADER */
+.c-header__nav {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .c-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .c-header__nav {
+        display: block;
     }
 }
 
